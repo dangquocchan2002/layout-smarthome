@@ -1,0 +1,474 @@
+<!doctype html>
+<html xmlns="http://thymeleaf.org" lang="en">
+
+<head>
+    <title>Detail</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Link icon -->
+    <link rel="shortcut icon" href="logodigi2.png" type="image/x-icon">
+    
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- Link css -->
+    
+    <link rel="stylesheet" href="layout.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .single-product{
+    margin-top: 80px;
+
+}
+.single-product .col-6 img{
+    padding: 0;
+}
+.single-product .col-6{
+    padding: 20px;
+} 
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523b;
+}
+.small-img-row{
+    
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+.btn-add{
+    display: inline-block;
+    background: #1966d8;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+    </style>
+</head>
+
+<body>
+    <header class="section-header">
+        <!-- Top header -->
+        <div class="top-header">
+            <ul class="nav justify-content-end">
+                <li class="nav-item mr-auto">
+                    <a class="nav-link active" href="#"><i class="fas fa-home mr-2"></i>105 Nguyễn Hoàng, Hải Châu, Đà Nẵng</a>
+                </li>
+                <li class="nav-item mr-auto">
+                    <a class="nav-link" href="#"><i class="fas fa-envelope mr-2"></i>digizone.com.vn@gmail.com</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Hotline : 0905 008 070</a>
+                </li>
+            </ul>
+        </div>
+        <!-- header -->
+        <section class="header-main border-bottom">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-sm-4 col-md-4 col-5">
+                        <a href="#" class="brand-wrap">
+                            <img class="logo img-fluid w-75" src="logodigi2.png">
+                            <!-- <span class="logo">Digizone</span> -->
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+                        <form action="#" class="search-wrap">
+                            <div class="input-group w-100"> <input type="text" class="form-control search-form" style="width:55%;" placeholder="Nhập từ khóa cần tìm...">
+                                <div class="input-group-append"> <button class="btn btn-primary search-button" type="submit"> <i class="fa fa-search"></i> </button> </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
+                        <div class="d-flex justify-content-end">
+                            <div class="dropdown btn-group"> <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa fa-shopping-bag"></i></a>
+
+                            </div> <span class="vl"></span> <a class="nav-link nav-user-img" href="#" data-toggle="modal" data-target="#login-modal"><span class="login">LOGIN</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- nav -->
+        <nav class="navbar navbar-expand-md navbar-main border-bottom">
+            <div class="container-fluid">
+                <form class="d-md-none my-2">
+                    <div class="input-group"> <input type="search" name="search" class="form-control" placeholder="Search" required="">
+                        <div class="input-group-append"> <button type="submit" class="btn btn-secondary"> <i class="fa fa-search"></i> </button> </div>
+                    </div>
+                </form> <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown6" aria-expanded="false"> <span class="navbar-toggler-icon"></span> </button>
+                <div class="navbar-collapse collapse" id="dropdown6">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-expanded="false">Danh mục sản phẩm</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="">Thiệt bị gia dụng</a>
+                                <a class="dropdown-item" href="">Robot hút bụi</a>
+                                <a class="dropdown-item" href="">Quạt + sưởi thông minh</a>
+                                <a class="dropdown-item" href="">Máy lọc không khí</a>
+                                <a class="dropdown-item" href="">Thiết bị sức khỏe</a>
+                                <a class="dropdown-item" href="">Phụ kiện điện thoại</a>
+                                <a class="dropdown-item" href="">Thiết bị mạng</a>
+                                <a class="dropdown-item" href="">Đèn thông minh</a>
+                                <a class="dropdown-item" href="">Thiết bị nhà thông minh</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="">Review sản phẩm</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="">Hướng dẫn sử dụng</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="">Tin tức sản phẩm</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="">Khuyến mãi</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="">Liên hệ</a> </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><img src="vietnam.png" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><img src="united-kingdom.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- slide -->
+        <!-- <div id="carouselExampleControls" class="carousel slide" data-interval="1700" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href=""><img class="d-block w-100" src="https://digizone.com.vn/wp-content/uploads/2022/09/tivia2-1536x520.png" alt="First slide"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href=""><img class="d-block w-100" src="https://digizone.com.vn/wp-content/uploads/2022/09/himoz20-1536x520.png" alt="Second slide"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href=""><img class="d-block w-100" src="https://digizone.com.vn/wp-content/uploads/2022/08/Xa%CC%89-Ha%CC%80ng-He%CC%803-1536x520.png" alt="Third slide"></a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div> -->
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="small-container single-product">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="bep-tu-doi-thong-minh-mijia-mdcld01acm-1.jpg" width="100%" id="productImg">
+    
+                        <div class="small-img-row">
+                            <div class="small-img-col">
+                                <img src="bep-dien-tu-zhiwu-zhu__nnn_.jpg" width="100%" class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="may-massage-chan-leravan_n_.jpg" width="100%" class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="c66752476f22274d8fdd89594ae2a168.jpg" width="100%" class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="DCFBCD0ED8-SP-11426226-1-800x800.jpg" width="100%" class="small-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p >Home/T-Shirt</p>
+                        <h1>Bếp Từ Đôi Xiaomi Mijia MDCLD01ACM</h1>
+                        <h4>$50.00</h4>
+                        <select  style="display: block; padding: 10px; margin-top: 20px;">
+                            <option>Cỡ lớn hơn</option>
+                            <option>Màu hồng</option>
+                            <option>Cỡ nhỏ hơn</option>
+                        </select>
+                        <input class="mt-2" type="number" value="1">
+                        <a href="" class="btn-add">Add To Cart</a>
+                        
+    
+                        <h3>Chi tiết sản phẩm</h3>
+                        
+                            <p>Thiết kế sang trọng, hiện đại.</p>
+                            <p>Công suất lớn, tiết kiệm thời gian nấu.</p>
+                            <p>Tùy chỉnh mức nhiệt nấu, đầy đủ các trang bị an toàn.</p>
+                            <p>Hỗ trợ kết nối APP thông minh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <section id="pricing" class="padd-section text-center wow fadeInUp mt-5" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="section-header">
+                <h2 class="section-title">Sản phẩm liên quan</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-4 col-6 col-sm-6 col-lg-3 pb-3">
+                        <div class="block-pricing">
+                            <div class="table">
+                                <div class="special-img position-relative overflow-hidden">
+                                    <img src="c66752476f22274d8fdd89594ae2a168.jpg" class="w-100">
+                                    <span class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">Sale</span>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li><b>Name Product</b></li>
+                                    <li><b>Price</b></li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="rating mt-3">
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 col-sm-6 col-lg-3 pb-3">
+                        <div class="block-pricing">
+                            <div class="table">
+                                <div class="special-img position-relative overflow-hidden">
+                                    <img src="/bep-tu-doi-thong-minh-mijia-mdcld01acm-1.jpg" class="w-100">
+                                    <span class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li><b>Name Product</b></li>
+                                    <li><b>Price</b></li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="rating mt-3">
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-6 col-sm-6 col-lg-3 pb-3">
+                        <div class="block-pricing">
+                            <div class="table">
+                                <div class="special-img position-relative overflow-hidden">
+                                    <img src="may-massage-chan-leravan_n_.jpg" class="w-100">
+                                    <span class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li><b>Name Product</b></li>
+                                    <li><b>Price</b></li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="rating mt-3">
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-6 col-sm-6 col-lg-3 pb-3">
+                        <div class="block-pricing">
+                            <div class="table">
+                                <div class="special-img position-relative overflow-hidden">
+                                    <img src="/DCFBCD0ED8-SP-11426226-1-800x800.jpg" class="w-100">
+                                    <span class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li><b>Name Product</b></li>
+                                    <li><b>Price</b></li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="rating mt-3">
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                        <span class="text-primary_1"><i class = "fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer bg-light">
+        <div class="icon bg-footer">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-md-12 text-center">
+                        <a href="#"><i class="fas fa-envelope mr-5 fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-facebook-square mr-5 fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram mr-5 fa-2x"></i></i></a>
+                        <a href="#"><i class="fab fa-twitter mr-5 fa-2x"></i></i></a>
+                        <a href="#"><i class="fas fa-phone mr-5 fa-2x"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center text-md-left mt-5">
+            <div class="row">
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6>
+                        <Strong>DIGIZONE STORE</Strong>
+                    </h6>
+                    <hr class="bg-success mt-1 d-inline-block mx-auto" style="width: 125px; height: 2px;">
+                    <p class="mt-2"><span class="text" style="color: #000000; font-size: 100%;"><strong>Địa chỉ:</strong> 105 Nguyễn Hoàng, Phường Hải Châu 2, Quận Hải Châu, Đà Nẵng</span><br><span style="color: #000000; font-size: 100%;"><strong><span class="text">Điện thoại: </span></strong>
+                        <a class="text-is-phone-number" style="color: #000000;">0905.008.070</a>
+                        </span><br><span style="color: #000000; font-size: 100%;"><strong><span class="text">Email: </span></strong>
+                        </span><a href="mailto:digizone.com.vn@gmail.com" target="_blank" rel="noopener"><span style="color: #000000;">digizone.com.vn@gmail.com</span></a></p>
+
+                </div>
+
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6><strong>Chăm sóc khách hàng</strong></h6>
+                    <hr class="bg-success mt-1 d-inline-block mx-auto" style="width: 160px; height: 2px;">
+                    <ul class="list-unstyled">
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Hỗ trợ kỹ thuật</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Kinh doanh, bán buôn</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Lắp đặt và bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6><strong>Chính sách bán hàng</strong></h6>
+                    <hr class="bg-success mt-1 d-inline-block mx-auto" style="width: 153px; height: 2px;">
+                    <ul class="list-unstyled">
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Hướng dẫn đặt hàng</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Chính sách thanh toán</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Chính sách bảo hành</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Chính sách bảo mật</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Chính sách đổi trả và hoàn tiền</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#">Điều khoản, quy định chung</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6><strong>Thanh toán</strong></h6>
+                    <hr class="bg-success mt-1 d-inline-block mx-auto" style="width: 83px; height: 2px;">
+                    <ul class="list-unstyled">
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#"><i class="fas fa-home mr-2"></i>137 Nguyễn Thị Thập, Thanh Khê</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#"><i class="fas fa-envelope mr-2"></i>caodangFPTpoly@gmail.com</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#"><i class="fas fa-phone mr-2"></i>0236 3710 999</a>
+                        </li>
+                        <li class="my-2">
+                            <a style="text-decoration: none" href="#"><i class="fas fa-fax mr-2"></i>00228718739878</a>
+                        </li>
+                        <li class="my-2">
+                            <a href="https://ap.poly.edu.vn/"><i class="fas fa-globe-asia mr-2"></i>ap.poly.edu.vn/</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3 bg-light">
+            <h5>&copy; Digizone Store
+                <a href="https://digizone.com.vn/">digizone.com.vn</a></h5>
+            <p>Cung cấp thiết bị đèn Yeelight - Gia dụng, đồ công nghệ Xiaomi.</p>
+        </div>
+    </footer>
+
+
+    <!-- scrip click anh  -->
+    <script>
+        var productImg = document.getElementById("productImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function()
+            {
+                productImg.src = SmallImg[0].src;
+            }
+        SmallImg[1].onclick = function()
+            {
+                productImg.src = SmallImg[1].src;
+            }
+        SmallImg[2].onclick = function()
+            {
+                productImg.src = SmallImg[2].src;
+            }
+        SmallImg[3].onclick = function()
+            {
+                productImg.src = SmallImg[3].src;
+            }
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
